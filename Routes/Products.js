@@ -10,7 +10,7 @@ router.get("/products", async (req, res) => {
 
     const product = await Product.find(query).populate({
       path: "offer.bundledProduct",
-      select: "name price",
+      select: "name price imageUrl",
     });
     if (!product.length) {
       return res.status(404).json({ message: "Product not found" });

@@ -63,7 +63,7 @@ router.get("/orders", async (req, res) => {
   try {
     const orders = await Order.find({}).populate({
       path: "product",
-      select: "name price offer",
+      select: "name price offer imageUrl offeredPrice",
       populate: {
         path: "offer.bundledProduct",
         select: "name price",

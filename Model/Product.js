@@ -21,6 +21,7 @@ const productSchema = new mongoose.Schema({
     type:Boolean,
     default:false
   },
+  offeredPrice:Number,
   offer: {
     type: {
       type: String,

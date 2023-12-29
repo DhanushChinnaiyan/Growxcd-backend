@@ -66,7 +66,7 @@ router.get("/orders", async (req, res) => {
       select: "name price offer imageUrl offeredPrice",
       populate: {
         path: "offer.bundledProduct",
-        select: "name price",
+        select: "name price imageUrl",
       },
     });
 
